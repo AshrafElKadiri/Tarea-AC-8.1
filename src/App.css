@@ -1,0 +1,144 @@
+/* Global Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa;
+  color: #333;
+  display: flex; /* Usamos flexbox */
+  justify-content: center; /* Centrar horizontalmente */
+  align-items: center; /* Centrar verticalmente */
+  height: 100vh; /* Usar toda la altura de la ventana */
+  box-sizing: border-box;
+}
+
+/* Main container */
+.App {
+  text-align: center;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 600px; /* Limitar el ancho del contenido */
+  width: 100%;
+}
+
+/* Botón de alternancia */
+.toggleButton {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  margin: 20px auto; /* Centrar el botón */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: block; /* Aseguramos que ocupe una línea completa */
+}
+
+.toggleButton:hover {
+  background-color: #0056b3;
+}
+
+/* Títulos */
+.title {
+  font-size: 24px;
+  margin: 20px 0;
+}
+
+.subTitle, .foodTitle {
+  font-size: 20px;
+  margin: 15px 0;
+  color: #333;
+}
+
+/* Listas */
+.ulApp, .ulFoods {
+  list-style-type: none;
+  padding: 0;
+  margin: 0 auto; /* Centrar la lista */
+  max-width: 500px; /* Limitar el ancho */
+}
+
+.liApp, .liFoods {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin: 5px 0;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  transition: transform 0.2s ease;
+}
+
+.liApp:hover, .liFoods:hover {
+  transform: scale(1.02);
+}
+
+/* Imágenes */
+.foodImg {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-right: 15px;
+}
+
+/* Formulario de pedidos */
+.orderForm {
+  margin: 20px auto;
+  text-align: left;
+  max-width: 500px;
+}
+
+.orderForm label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.orderInput {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* Botones del formulario */
+.orderButtons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.orderButton {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.orderButton.submit {
+  background-color: #28a745;
+  color: white;
+}
+
+.orderButton.return {
+  background-color: #ffc107;
+  color: black;
+}
+
+.orderButton:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Mensajes */
+.loadingMessage, .orderConfirmation {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #28a745;
+}
