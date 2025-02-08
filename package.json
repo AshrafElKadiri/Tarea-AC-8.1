@@ -1,6 +1,6 @@
 {
   "name": "taller-5-1",
-  "home": "https://AshrafElKadiri.github.io/Tarea-AC-6.2/",
+  "home": "https://AshrafElKadiri.github.io/Tarea-AC-7.1/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -15,12 +15,17 @@
   "dependencies": {
     "firebase": "^11.2.0",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "react-redux": "^9.2.0",
+    "react-router-dom": "^7.1.5",
+    "redux": "^5.0.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.17.0",
+    "@reduxjs/toolkit": "^2.5.1",
     "@types/react": "^18.3.18",
     "@types/react-dom": "^18.3.5",
+    "@types/react-router-dom": "^5.3.3",
     "@vitejs/plugin-react": "^4.3.4",
     "eslint": "^9.17.0",
     "eslint-plugin-react-hooks": "^5.0.0",

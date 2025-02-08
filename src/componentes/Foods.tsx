@@ -29,7 +29,7 @@ function Foods(props: FoodsProps) {
                                 <li key={item.id} className="liFoods">
                                     <img
                                         className="foodImg"
-                                        src={`/images/${item.image}`}
+                                        src={`${import.meta.env.BASE_URL}images/${item.image}`}
                                         alt={item.name}
                                     />
                                     <div className="foodItem" onClick={() => handleFoodClick(item)}>
