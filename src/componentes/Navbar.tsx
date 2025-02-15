@@ -19,15 +19,15 @@ const Navbar: React.FC = () => {
     return (
         <nav className="navbar">
             <ul className="nav-menu">
-                <li><Link to="/">Home</Link></li>
+                <li><Link to={`${import.meta.env.BASE_URL}`}>Home</Link></li>
                 {user && roles && roles.includes(Role.ADMIN) && (
-                    <li><Link to="/disponiblidad">Disponiblidad</Link></li>)
+                    <li><Link to={`${import.meta.env.BASE_URL}/disponiblidad`}>Disponiblidad</Link></li>)
                 }
                 {user && roles && roles.includes(Role.USER) && (
-                    <li><Link to="/FoodsOrder">Comida</Link></li>)
+                    <li><Link to={`${import.meta.env.BASE_URL}/comidas`}>Comida</Link></li>)
                 }
-                {!user && <li><Link to="/login">Login</Link></li>}
-                {!user && <li><Link to="/register">Registro</Link></li>}
+                {!user && <li><Link to={`${import.meta.env.BASE_URL}/login`}>Login</Link></li>}
+                {!user && <li><Link to={`${import.meta.env.BASE_URL}/register`}>Registro</Link></li>}
                 {user && <li><button onClick={handleLogout}>Logout</button></li>}
             </ul>
         </nav>

@@ -17,11 +17,11 @@ const App: React.FC = () => {
         <Navbar />
         <div className="main-content">
           <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/register" element={<Register />} />
-            <Route path="/Foods" element={<ProtectedRoute><Foods /></ProtectedRoute>} />
-            <Route path="/disponiblidad" element={<AdminRoute><FoodStock /></AdminRoute>} />
+            <Route path={`${import.meta.env.BASE_URL}`} element={<Home />} />
+            <Route path={`${import.meta.env.BASE_URL}/login`} element={<Login />} />
+            <Route path={`${import.meta.env.BASE_URL}/register`} element={<Register />} />
+            <Route path={`${import.meta.env.BASE_URL}/comidas`} element={<ProtectedRoute><Foods /></ProtectedRoute>} />
+            <Route path={`${import.meta.env.BASE_URL}/disponiblidad`} element={<AdminRoute><FoodStock /></AdminRoute>} />
             <Route path="*" element={<Home />} />
           </Routes>
         </div>
