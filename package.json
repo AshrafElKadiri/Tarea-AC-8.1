@@ -1,6 +1,6 @@
 {
   "name": "taller-5-1",
-  "home": "https://AshrafElKadiri.github.io/Tarea-AC-7.1/",
+  "home": "https://AshrafElKadiri.github.io/Tarea-AC-8.1/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -14,6 +14,7 @@
   },
   "dependencies": {
     "firebase": "^11.2.0",
+    "gh-pages": "^6.3.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-redux": "^9.2.0",

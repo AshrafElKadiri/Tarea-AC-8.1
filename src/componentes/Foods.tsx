@@ -1,30 +1,32 @@
-import { MouseEventHandler, useState } from "react";
+import { useState } from "react";
 import { MenuItem } from "../entities/entities";
 import FoodOrder from "./FoodOrder";
 import ErrorBoundary from "./ErrorBoundary";
+import { useSelector } from "react-redux";
+import { RootState } from "../redux/store";
 
 
-
-interface FoodsProps {
-    foodItems: MenuItem[];
-    //onQuantityUpdated(id: number, quantity: number): void;
-    onReturnToMenu: MouseEventHandler<HTMLButtonElement> | undefined;
-}
-function Foods(props: FoodsProps) {
+function Foods() {
     const [buyFood, setBuyFood] = useState(false);
-    const [food, setFood] = useState<MenuItem>(props.foodItems[0]);
+    const menuItems = useSelector((state: RootState) => state.menu.items);
+    const [food, setFood] = useState<MenuItem>(menuItems[0]);
+
 
     const handleFoodClick = (item: MenuItem) => {
         setBuyFood(true);
         setFood(item);
     };
+
+    const onReturnToMenu = () => {
+        setBuyFood(false);
+    }
     return (
         <>
             {!buyFood && ( 
                 <>
                     <h4 className="foodTitle">Carta</h4>
                     <ul className="ulFoods">
-                        {props.foodItems.map((item) => {
+                        {menuItems.map((item) => {
                             return (
                                 <li key={item.id} className="liFoods">
                                     <img
@@ -45,13 +47,10 @@ function Foods(props: FoodsProps) {
             }
             { buyFood && ( 
                 <>
-                <ErrorBoundary fallback={<div>¡Algo salió mal!</div>}>
-                    <FoodOrder food={food} 
-                        //onQuantityUpdated={props.onQuantityUpdated} 
-                        onReturnToMenu={props.onReturnToMenu}/>
-                </ErrorBoundary>
-
-                   
+                    <ErrorBoundary fallback={<div>¡Algo salió mal!</div>}>
+                        <FoodOrder food={food}  
+                            onReturnToMenu={onReturnToMenu}/>
+                    </ErrorBoundary>
                 </>
             )}
 

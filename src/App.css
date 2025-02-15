@@ -5,10 +5,10 @@ body {
   padding: 0;
   background-color: #f8f9fa;
   color: #333;
-  display: flex; /* Usamos flexbox */
-  justify-content: center; /* Centrar horizontalmente */
-  align-items: center; /* Centrar verticalmente */
-  height: 100vh; /* Usar toda la altura de la ventana */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
   box-sizing: border-box;
 }
 
@@ -19,7 +19,7 @@ body {
   background-color: #ffffff;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  max-width: 600px; /* Limitar el ancho del contenido */
+  max-width: 600px;
   width: 100%;
 }
 
@@ -28,11 +28,11 @@ body {
   background-color: #007bff;
   color: white;
   padding: 10px 20px;
-  margin: 20px auto; /* Centrar el botón */
+  margin: 20px auto;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  display: block; /* Aseguramos que ocupe una línea completa */
+  display: block;
 }
 
 .toggleButton:hover {
@@ -55,8 +55,8 @@ body {
 .ulApp, .ulFoods {
   list-style-type: none;
   padding: 0;
-  margin: 0 auto; /* Centrar la lista */
-  max-width: 500px; /* Limitar el ancho */
+  margin: 0 auto;
+  max-width: 500px;
 }
 
 .liApp, .liFoods {
@@ -141,4 +141,91 @@ body {
   margin-top: 15px;
   font-size: 14px;
   color: #28a745;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #007bff;
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.nav-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.nav-menu li {
+  display: inline;
+}
+
+.nav-menu a, .nav-menu button {
+  color: white;
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  background-color: #0056b3;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.nav-menu a:hover, .nav-menu button:hover {
+  background-color: #003f7f;
+}
+
+/* Home Component */
+.home-container {
+  text-align: center;
+  padding: 20px;
+}
+
+/* Login & Register Forms */
+.login-form, .register-form {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+  margin: auto;
+}
+
+input {
+  width: 90%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+button {
+  background-color: #28a745;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #218838;
+}
+
+.error-message {
+  color: red;
+  font-size: 14px;
+}
+
+.success-message {
+  color: green;
+  font-size: 14px;
 }
